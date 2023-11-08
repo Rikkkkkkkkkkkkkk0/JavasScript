@@ -1,0 +1,29 @@
+function printHello() {
+    console.log('Hello');
+}
+printHello();
+
+function log(message) {
+    console.log(message);
+}
+log('Hello@');
+log(1234);
+
+function changeName(obj) {
+    obj.name = 'coder';
+}
+const ellie = { name: 'ellie' };
+changeName(ellie);
+console.log(ellie);
+
+let globalMessage = 'global'; // global variable
+function printMessage() {
+    let Message = 'hello';
+    console.log(Message); // local variable
+    console.log(globalMessage);
+    function printAnother() {
+        console.log(Message);
+        let childMessage = 'hello';
+    }
+}
+printMessage();
